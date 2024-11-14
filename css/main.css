@@ -1,0 +1,225 @@
+@charset "utf-8";
+body {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+header {
+    padding-top:30px;
+    position:absolute;
+    width:100%;
+}
+header .wrap {
+    width:95%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:0 auto;
+}
+header h1 img {
+    width:60px;
+}
+header nav > ul {
+    display:flex;
+    gap:30px;
+    font-size:18px;
+}
+.menu button {
+    background-color:transparent;
+    border:none;
+}
+.menu button > span {
+    display:block;
+    width:30px;
+    height:5px;
+    background-color:#000;
+    margin:10px 0;
+}
+#visual {
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.cube {
+    width:600px;
+    height:600px;
+    background-color:aliceblue;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.cube .center {
+    background-image:url('../images/cube-motion-0.png');
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+    height:100%;
+    transform:rotate(15deg);
+    animation:cube 2s linear infinite alternate;
+    position:relative;
+    z-index:10;
+}
+@keyframes cube {
+    0%{
+        background-image:url('../images/cube-motion-0.png');
+        top:0;
+    }
+    5% {
+        background-image:url('../images/cube-motion-1.png');
+    }
+    10% {
+        background-image:url('../images/cube-motion-2.png');
+    }
+    15% {
+        background-image:url('../images/cube-motion-3.png');
+    }
+    20% {
+        background-image:url('../images/cube-motion-4.png');
+    }
+    25% {
+        background-image:url('../images/cube-motion-5.png');
+    }
+    30% {
+        background-image:url('../images/cube-motion-6.png');
+    }
+    35% {
+        background-image:url('../images/cube-motion-7.png');
+    }
+    40% {
+        background-image:url('../images/cube-motion-8.png');
+    }
+    45% {
+        background-image:url('../images/cube-motion-9.png');
+    }
+    50% {
+        background-image:url('../images/cube-motion-10.png');
+    }
+    55% {
+        background-image:url('../images/cube-motion-11.png');
+    }
+    60% {
+        background-image:url('../images/cube-motion-12.png');
+    }
+    65% {
+        background-image:url('../images/cube-motion-13.png');
+    }
+    70% {
+        background-image:url('../images/cube-motion-14.png');
+    }
+    75% {
+        background-image:url('../images/cube-motion-15.png');
+    }
+    80% {
+        background-image:url('../images/cube-motion-16.png');
+    }
+    85% {
+        background-image:url('../images/cube-motion-17.png');
+    }
+    90% {
+        background-image:url('../images/cube-motion-18.png');
+    }
+    95% {
+        background-image:url('../images/cube-motion-19.png');
+    }
+    100% {
+        background-image:url('../images/cube-motion-20.png');
+        top:60px;
+    }
+}
+.cube .circle1 {
+    position:absolute;
+    left:20px;
+    bottom:70px;
+    width:80px;
+    animation-name:circle_l;
+    animation-duration:4s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+@keyframes circle_l {
+    0% {
+        bottom:70px;
+    }
+    100% {
+        bottom:120px;
+    }
+}
+.cube .circle2 {
+    position:absolute;
+    right:0;
+    top:125px;
+    width:50px;
+    animation:circle_m 4s ease-in-out infinite alternate;
+}
+@keyframes circle_m {
+    0% {
+        top:125px;
+    }
+    100% {
+        top:180px;
+    }
+}
+.cube .circle3 {
+    position:absolute;
+    right:90px;
+    bottom:90px;
+    width:30px;
+    animation:circle_s 4s ease-in-out infinite alternate;
+}
+@keyframes circle_s {
+    0% {
+        bottom:90px;
+    }
+    100% {
+        bottom:30px;
+    }
+}
+.cube > div > img {
+    width:100%;
+}
+#visual .text {
+    font-size:180px;
+    font-weight:700;
+    text-align:center;
+    position:relative;
+    z-index:11;
+}
+
+/**1440 1024 768*/
+@media screen and (max-width:1440px) and (min-width:1025px) {
+    .cube {
+        width:400px;
+        height:400px;
+    }
+    #visual .text {
+        font-size:120px;
+    }
+}
+@media screen and (max-width:1024px) and (min-width:769px) {
+    header nav {
+        display:none;
+    }
+    .cube {
+        width:400px;
+        height:400px;
+    }
+    #visual .text {
+        font-size:120px;
+    }
+}
+@media screen and (max-width:768px) {
+    header nav {
+        display:none;
+    }
+    .cube {
+        width:300px;
+        height:300px;
+    }
+    #visual .text {
+        font-size:90px;
+    }
+}
